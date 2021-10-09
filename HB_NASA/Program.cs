@@ -86,6 +86,12 @@ namespace HB_NASA
             return arrTemp;
         }
 
+        /// <summary>
+        /// alan ve data girişi 
+        /// </summary>
+        /// <param name="controlArea"></param>
+        /// <param name="flagforData"></param>
+        /// <returns></returns>
         private static List<string> ControlForSyntax(string controlArea, bool flagforData)
         {
             string plateau;
@@ -136,8 +142,8 @@ namespace HB_NASA
 
 
         }
-
-        private static string ControlForInput(List<string> controlData, bool flag)
+        /// data girişlerinin doğru yapılıp yapılmadığı kontrolü
+        public static string ControlForInput(List<string> controlData, bool flag)
         {
             string[] rotation = new string[] { "N", "E", "W", "S" };
             string[] direction = new string[] { "L", "M", "R" };
@@ -156,14 +162,34 @@ namespace HB_NASA
             {
                 return "Girdiğiniz değerlerde  ilk 2 değer sayı 3. değeriniz 'S,E,N,W' den biri olmalıdır.";
             }
-
-            if (!flag && !(controlData.Any(X => X.Contains(direction[0]))) && !(controlData.Any(X => X.Contains(direction[1]))) && !(controlData.Any(X => X.Contains(direction[2]))))
+            if (!flag)
             {
-                return "Girdiğiniz değerlerde aralarda virgül ,nokta vs olmadan hareket rotaları L,R,M olarak düzenlenmesi gerekmektedir.";
+                for (int i = 0; i < controlData.Count; i++)
+                {
+                    if (controlData[i]==direction[0])
+                    {
+                        continue;
+                    }
+                    else if(controlData[i] == direction[1])
+                    {
+                        continue;
+                    }
+                    else if (controlData[i] == direction[2])
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        return "Girdiğiniz değerlerde aralarda virgül ,nokta vs olmadan hareket rotaları L,R,M olarak düzenlenmesi gerekmektedir.";
+                    }
+                }
             }
+           
 
             return "";
         }
+
+        //son durumda doğru datalarla girilmiş son koordinatı verir.
         public static string plaetauCoordinate(List<string> listLastRotate, List<string> firstDirection)
         {
 
@@ -212,7 +238,66 @@ namespace HB_NASA
             //  Console.WriteLine(firstDirection[0] + " " + firstDirection[1] + " " + lastDirection);
             return firstDirection[0] + " " + firstDirection[1] + " " + lastDirection;
         }
+        // unit testten kontrollerin görülmesi için çoklanmış bir methoddur.
+        public static string plaetauCoordinateUnitTest(List<string> listLastRotate, List<string> firstDirection)
+        {
+           
+            string messageCoordinate = ControlForInput(firstDirection, true);
+            if (messageCoordinate != "")
+            {
+                return messageCoordinate;
+            }
 
+            string messageRotate = ControlForInput(listLastRotate, false);
+            if (messageRotate != "")
+            {
+                return messageRotate;
+            }
+            int directionData = returnCoordinate(firstDirection[2]);
+
+            for (int i = 0; i < listLastRotate.Count; i++)
+            {
+                if (listLastRotate[i] == "R")
+                {
+                    directionData = directionData + 1;
+                    if (directionData > 3)
+                    {
+                        directionData = directionData - 4;
+                    }
+                }
+
+                else if (listLastRotate[i] == "L")
+                {
+                    directionData = directionData - 1;
+                    if (directionData < 0)
+                    {
+                        directionData = directionData + 4;
+                    }
+                }
+                else
+                {
+                    if (directionData == 0)
+                    {
+                        firstDirection[1] = (Convert.ToInt32(firstDirection[1]) + 1).ToString();
+                    }
+                    else if (directionData == 1)
+                    {
+                        firstDirection[0] = (Convert.ToInt32(firstDirection[0]) + 1).ToString();
+                    }
+                    else if (directionData == 2)
+                    {
+                        firstDirection[1] = (Convert.ToInt32(firstDirection[1]) - 1).ToString();
+                    }
+                    else if (directionData == 3)
+                    {
+                        firstDirection[0] = (Convert.ToInt32(firstDirection[0]) - 1).ToString();
+                    }
+                }
+            }
+            string lastDirection = Enum.GetName(typeof(Directions), directionData);
+            //  Console.WriteLine(firstDirection[0] + " " + firstDirection[1] + " " + lastDirection);
+            return firstDirection[0] + " " + firstDirection[1] + " " + lastDirection;
+        }
         private static int returnCoordinate(string direction)
         {
             int returnData = Convert.ToInt32((Directions)Enum.Parse(typeof(Directions), direction));

@@ -1,7 +1,6 @@
 C:\Users\DENIZBAT\source\repos\NASA\HB_NASA\bin\Debug\HB_NASA.exe.config
 C:\Users\DENIZBAT\source\repos\NASA\HB_NASA\bin\Debug\HB_NASA.exe
 C:\Users\DENIZBAT\source\repos\NASA\HB_NASA\bin\Debug\HB_NASA.pdb
-C:\Users\DENIZBAT\source\repos\NASA\HB_NASA\obj\Debug\HB_NASA.csprojAssemblyReference.cache
 C:\Users\DENIZBAT\source\repos\NASA\HB_NASA\obj\Debug\HB_NASA.csproj.CoreCompileInputs.cache
 C:\Users\DENIZBAT\source\repos\NASA\HB_NASA\obj\Debug\HB_NASA.exe
 C:\Users\DENIZBAT\source\repos\NASA\HB_NASA\obj\Debug\HB_NASA.pdb
