@@ -1,0 +1,17 @@
+C:\Users\DENIZBAT\source\repos\NASA\NASAUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\DENIZBAT\source\repos\NASA\NASAUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\DENIZBAT\source\repos\NASA\NASAUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\DENIZBAT\source\repos\NASA\NASAUnitTest\bin\Debug\NASAUnitTest.dll
+C:\Users\DENIZBAT\source\repos\NASA\NASAUnitTest\bin\Debug\NASAUnitTest.pdb
+C:\Users\DENIZBAT\source\repos\NASA\NASAUnitTest\bin\Debug\HB_NASA.exe
+C:\Users\DENIZBAT\source\repos\NASA\NASAUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\DENIZBAT\source\repos\NASA\NASAUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\DENIZBAT\source\repos\NASA\NASAUnitTest\bin\Debug\HB_NASA.pdb
+C:\Users\DENIZBAT\source\repos\NASA\NASAUnitTest\bin\Debug\HB_NASA.exe.config
+C:\Users\DENIZBAT\source\repos\NASA\NASAUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\DENIZBAT\source\repos\NASA\NASAUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\DENIZBAT\source\repos\NASA\NASAUnitTest\obj\Debug\NASAUnitTest.csprojAssemblyReference.cache
+C:\Users\DENIZBAT\source\repos\NASA\NASAUnitTest\obj\Debug\NASAUnitTest.csproj.CoreCompileInputs.cache
+C:\Users\DENIZBAT\source\repos\NASA\NASAUnitTest\obj\Debug\NASAUnitTest.csproj.CopyComplete
+C:\Users\DENIZBAT\source\repos\NASA\NASAUnitTest\obj\Debug\NASAUnitTest.dll
+C:\Users\DENIZBAT\source\repos\NASA\NASAUnitTest\obj\Debug\NASAUnitTest.pdb
